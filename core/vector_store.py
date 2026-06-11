@@ -12,10 +12,9 @@ CHROMA_DIR="vector_db"
 
 
 def getEmbeddings():
-    return  HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2",huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_ACCESS_TOKEN"))
+    return  HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 def build_vector_store(transcript:str)->Chroma:
-    print("buliding vector store")
     
     spliting_text = RecursiveCharacterTextSplitter(
     chunk_size=1000,
@@ -29,10 +28,10 @@ def build_vector_store(transcript:str)->Chroma:
         for i,chunck in enumerate(chuncks)
     ]
  
-
+    embeddings =getEmbeddings()
     vector_store= Chroma.from_documents(
         documents=docs,
-        embedding=getEmbeddings,
+        embedding=embeddings,
         collection_name="meeting_transcript",
         persist_directory=CHROMA_DIR
     )
