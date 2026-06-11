@@ -1,4 +1,7 @@
 # 🎬 Video RAG — AI-Powered Video Intelligence Assistant
+<img width="1109" height="269" alt="image" src="https://github.com/user-attachments/assets/2238d692-f40b-4a4f-94d3-51349f5025ff" />
+
+
 
 An end-to-end CLI tool that takes any YouTube URL or local video/audio file and turns it into an interactive AI assistant. It transcribes the audio, generates a summary, extracts structured insights, builds a RAG (Retrieval-Augmented Generation) pipeline over the transcript, and drops you into a chat session where you can ask anything about the content.
 
