@@ -1,11 +1,11 @@
-# DevOps Configuration for rag-video
+# DevOps Configuration for tmpma8af4jv
 
 This repository has been configured automatically by the **AI DevOps Agent**.
 
 ## Architecture Summary
 
 - **Repository Type:** Single Service
-- **Service `rag-video`:**
+- **Service `tmpma8af4jv`:**
   - Framework: `python_generic`
   - Language: `python`
   - Package Manager: `uv`

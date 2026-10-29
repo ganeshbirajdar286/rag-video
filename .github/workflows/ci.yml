@@ -7,8 +7,8 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test-rag-video:
-    name: Test & Lint (rag-video)
+  test-tmpma8af4jv:
+    name: Test & Lint (tmpma8af4jv)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -30,4 +30,4 @@ jobs:
 
       - name: Verify Docker Build
         working-directory: .
-        run: docker build -t rag-video-rag-video:ci .
+        run: docker build -t tmpma8af4jv-tmpma8af4jv:ci .
