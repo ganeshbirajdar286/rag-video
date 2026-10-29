@@ -1,15 +1,14 @@
-version: '3.8'
-
 services:
-  rag-video:
+  tmpma8af4jv:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: rag-video-rag-video
+    container_name: tmpma8af4jv-tmpma8af4jv
     restart: unless-stopped
     ports:
       - "8000:8000"
     environment:
       - PORT=8000
     env_file:
-      - ./.env
+      - path: ./.env
+        required: false
