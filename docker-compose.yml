@@ -1,9 +1,9 @@
 services:
-  tmpauv25spm:
+  tmpfu9n40cc:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: tmpauv25spm-tmpauv25spm
+    container_name: tmpfu9n40cc-tmpfu9n40cc
     restart: unless-stopped
     ports:
       - "8000:8000"

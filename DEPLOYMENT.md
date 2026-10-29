@@ -1,11 +1,11 @@
-# DevOps Configuration for tmpauv25spm
+# DevOps Configuration for tmpfu9n40cc
 
 This repository has been configured automatically by the **AI DevOps Agent**.
 
 ## Architecture Summary
 
 - **Repository Type:** Single Service
-- **Service `tmpauv25spm`:**
+- **Service `tmpfu9n40cc`:**
   - Framework: `python_generic`
   - Language: `python`
   - Package Manager: `uv`

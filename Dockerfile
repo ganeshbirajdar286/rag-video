@@ -11,7 +11,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
+    build-essential ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Create virtual environment
@@ -19,10 +19,11 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 RUN pip install uv
-RUN pip install --no-cache-dir pydub
-RUN pip install --no-cache-dir yt-dlp
 COPY pyproject.toml uv.lock* ./
 RUN uv pip install -r pyproject.toml
+
+# Install unlisted dependencies detected via AST source scanning
+RUN pip install --no-cache-dir core langchain_chroma langchain_core langchain_huggingface langchain_mistralai langchain_text_splitters rich utils
 
 # ==========================================
 # Stage 2: Minimal Production Runner
@@ -35,6 +36,11 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PATH="/opt/venv/bin:$PATH" \
     PORT=8000
+
+# Install runtime system packages (e.g. ffmpeg, libpq)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
 
 # Security: Create and use non-root application user
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app

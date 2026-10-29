@@ -7,8 +7,8 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test-tmpauv25spm:
-    name: Test & Lint (tmpauv25spm)
+  test-tmpfu9n40cc:
+    name: Test & Lint (tmpfu9n40cc)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -30,4 +30,4 @@ jobs:
 
       - name: Verify Docker Build
         working-directory: .
-        run: docker build -t tmpauv25spm-tmpauv25spm:ci .
+        run: docker build -t tmpfu9n40cc-tmpfu9n40cc:ci .
