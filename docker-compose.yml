@@ -1,9 +1,9 @@
 services:
-  tmp_np5tdrd:
+  tmpauv25spm:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: tmp_np5tdrd-tmp_np5tdrd
+    container_name: tmpauv25spm-tmpauv25spm
     restart: unless-stopped
     ports:
       - "8000:8000"
