@@ -1,11 +1,11 @@
-# DevOps Configuration for tmpma8af4jv
+# DevOps Configuration for tmp_np5tdrd
 
 This repository has been configured automatically by the **AI DevOps Agent**.
 
 ## Architecture Summary
 
 - **Repository Type:** Single Service
-- **Service `tmpma8af4jv`:**
+- **Service `tmp_np5tdrd`:**
   - Framework: `python_generic`
   - Language: `python`
   - Package Manager: `uv`

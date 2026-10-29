@@ -1,9 +1,9 @@
 services:
-  tmpma8af4jv:
+  tmp_np5tdrd:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: tmpma8af4jv-tmpma8af4jv
+    container_name: tmp_np5tdrd-tmp_np5tdrd
     restart: unless-stopped
     ports:
       - "8000:8000"
