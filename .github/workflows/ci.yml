@@ -7,8 +7,8 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test-tmpma8af4jv:
-    name: Test & Lint (tmpma8af4jv)
+  test-tmp_np5tdrd:
+    name: Test & Lint (tmp_np5tdrd)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -30,4 +30,4 @@ jobs:
 
       - name: Verify Docker Build
         working-directory: .
-        run: docker build -t tmpma8af4jv-tmpma8af4jv:ci .
+        run: docker build -t tmp_np5tdrd-tmp_np5tdrd:ci .
